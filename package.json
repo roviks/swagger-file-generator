@@ -1,10 +1,18 @@
 {
   "name": "swagger-file-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "start": "node index.js",
+    "start": "node dist/index.js",
     "build": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -136,8 +136,6 @@ const init = () => {
   for (const path of pathKeys) {
     for (const includePath of opts.includePath) {
       if (path.includes(includePath)) {
-        console.log(json.swagger);
-
         if (json.swagger === "2.0") {
           json.definitions = {
             ...json.definitions,
