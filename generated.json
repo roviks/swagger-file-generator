@@ -1,0 +1,61 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/admin/users": {
+      "get": {
+        "operationId": "AdminUsersController_getUsers",
+        "summary": "Get all users",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersRes"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "[Admin] Users"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "easy-money-back",
+    "description": "Backend API for EasyMoney Mobile App on NestJS",
+    "version": "5.4.1",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "Token": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http",
+        "in": "header"
+      }
+    },
+    "schemas": {
+      "GetUsersRes": {
+        "type": "object",
+        "properties": {
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        },
+        "required": [
+          "users"
+        ]
+      }
+    }
+  }
+}
